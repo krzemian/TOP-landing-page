@@ -1,0 +1,49 @@
+:root {
+    box-sizing: border-box;
+    font-family: Roboto, serif; /* TODO: Change this */
+    font-size: 16px;
+
+    /* Variables */
+    --clr__bg--dark: #1F2937;
+    --clr__bg--mid: #E5E7EB;
+    --clr__bg--bright: #FFFFFF;
+    --clr__accent: #3882F6; /* CTA bg, buttons, borders */
+    --clr__text--dark: var(--clr__bg--dark);
+    --clr__text--bright: #F9FAF8;
+    --clr__text--mid: var(--clr__bg--mid);
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h1 {
+    font-size: 3rem; /* 48px */
+}
+
+h2, blockquote {
+    font-size: 2.25rem; /* 36px */
+}
+
+/* Header logo text */ /* TODO: Switch to a different tag? */
+h3 {
+    font-size: 1.5rem; /* 24px */
+}
+
+p {
+    font-size: 1.125rem; /* 18px */
+}
+
+header {
+    background-color: var(--clr__bg--dark);
+}
+
+blockquote {
+    font-style: italic;
+    color: var(--clr__text--mid);
+    background: var(--clr__bg--mid); /* TODO move to containing div? */
+}
+
+button {
+    background-color: var(--clr__accent);
+}
