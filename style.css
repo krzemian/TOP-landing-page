@@ -1,7 +1,8 @@
 :root {
     box-sizing: border-box;
-    font-family: Roboto, sans-serif; /* TODO: Load Roboto font */
+    font-family: Roboto, serif; /* TODO: Load Roboto font */
     font-size: 16px;
+    font-weight: 300;
 
     /* Variables */
     --clr__bg--dark: #1F2937;
@@ -66,6 +67,7 @@ header p {
 
 header p {
     color: var(--clr__text--mid);
+    font-weight: 300;
 }
 
 nav {
@@ -170,7 +172,7 @@ blockquote {
 
 .blockquote__footer {
     margin-top: -0.5rem;
-    font-weight: bold;
+    font-weight: normal;
     text-align: right;
 }
 
