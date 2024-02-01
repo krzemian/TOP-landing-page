@@ -1,6 +1,6 @@
 :root {
     box-sizing: border-box;
-    font-family: Roboto, serif; /* TODO: Load Roboto font */
+    font-family: Roboto, sans-serif; /* TODO: Load Roboto font */
     font-size: 16px;
     font-weight: 300;
 
