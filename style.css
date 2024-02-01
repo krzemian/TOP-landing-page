@@ -19,12 +19,21 @@
     box-sizing: inherit;
 }
 
+html {
+    /* TODO: Is it really required to keep the footer to the bottom? */
+    height: 100%;
+}
+
 body {
     margin: 0;
+
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .site-width {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -42,15 +51,15 @@ h3 {
     font-size: 1.5rem; /* 24px */
 }
 
-p {
-    font-size: 1.125rem; /* 18px */
-}
-
 header {
     background-color: var(--clr__bg--dark);
     color: var(--clr__text--bright);
-
+    
     padding-bottom: 5em;
+}
+
+header p {
+    font-size: 1.125rem; /* 18px */
 }
 
 header p {
@@ -104,10 +113,63 @@ nav ul a:hover {
     justify-content: center;
 }
 
+main {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.cards figure {
+    margin: 0;
+    display: flex;
+    flex-basis: 125px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards figure div {
+    border: 2px solid var(--clr__accent);
+    border-radius: var(--border-radius);
+    height: 125px;
+    width: 125px;
+}
+
+.cards figcaption {
+    margin-top: 0.5em;
+}
+
+.main__testimonial {
+    margin-top: 4rem;
+    padding: 2em;
+    background-color: var(--clr__bg--mid);
+
+    display: flex;
+    justify-content: center;
+}
+
 blockquote {
-    font-style: italic;
-    color: var(--clr__text--mid);
+    margin: 0;
+    color: var(--clr__text--dark);
     background: var(--clr__bg--mid); /* TODO move to containing div? */
+    
+    width: 80%;
+}
+
+.blockquote__quote {
+    text-align: left;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.blockquote__footer {
+    margin-top: -0.5rem;
+    font-weight: bold;
+    text-align: right;
 }
 
 button {
