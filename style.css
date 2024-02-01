@@ -1,6 +1,6 @@
 :root {
     box-sizing: border-box;
-    font-family: Roboto, serif; /* TODO: Change this */
+    font-family: Roboto, sans-serif; /* TODO: Load Roboto font */
     font-size: 16px;
 
     /* Variables */
@@ -11,14 +11,26 @@
     --clr__text--dark: var(--clr__bg--dark);
     --clr__text--bright: #F9FAF8;
     --clr__text--mid: var(--clr__bg--mid);
+
+    --border-radius: 7px;
 }
 
 *, *:before, *:after {
     box-sizing: inherit;
 }
 
+body {
+    margin: 0;
+}
+
+.site-width {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 h1 {
     font-size: 3rem; /* 48px */
+    margin: 0;
 }
 
 h2, blockquote {
@@ -36,6 +48,60 @@ p {
 
 header {
     background-color: var(--clr__bg--dark);
+    color: var(--clr__text--bright);
+
+    padding-bottom: 5em;
+}
+
+header p {
+    color: var(--clr__text--mid);
+}
+
+nav {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 1em;
+}
+
+nav h3 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul a:hover {
+    text-decoration: underline;
+}
+
+.welcome-panel {
+    display: flex;
+    gap: 2em;
+    margin-top: 3em;
+    padding: 0 1em;
+}
+
+.welcome-panel .left, .welcome-panel .right {
+    flex-basis: 50%;
+}
+
+.welcome-panel .right {
+    background-color: var(--clr__bg--mid);
+    color: var(--clr__bg--dark);
+    
+    /* To display the placeholder text in the center only */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 blockquote {
@@ -46,4 +112,17 @@ blockquote {
 
 button {
     background-color: var(--clr__accent);
+    color: var(--clr__text--mid);
+
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    /* Keep an invisible border to prevent content jumping */
+    border: 1px solid var(--clr__accent);
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.5em 1.5em 0.75em;
+}
+
+button:hover {
+    border: 1px solid var(--clr__text--mid);
 }
