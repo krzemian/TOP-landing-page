@@ -126,3 +126,13 @@ button {
 button:hover {
     border: 1px solid var(--clr__text--mid);
 }
+
+footer {
+    background-color: var(--clr__bg--dark);
+    color: var(--clr__text--bright);
+    padding: 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
